@@ -20,7 +20,7 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Login to Expo
-        run: npx expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
+        run: expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
       - name: Push to Expo
-        run: npx expo publish --non-interactive
+        run: expo publish --non-interactive
         

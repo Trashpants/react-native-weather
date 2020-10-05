@@ -1,6 +1,8 @@
 name: Linter
 
-on: push
+on:
+ workflow_run:
+    workflows: ["Jest"]
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -17,4 +19,3 @@ jobs:
         run: yarn
       - name: Lint
         run: yarn lint
-        
