@@ -1,0 +1,24 @@
+name: Deploy To Expo
+
+on: 
+  workflow_run:
+    workflows: ["Jest Testing", "Linter"]
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  publish:
+    # Name the Job
+    name: Deploy To Expo Default Channel
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Login to Expo
+        run: npx expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
+      - name: Push to Expo
+        run: npx expo publish --non-interactive
+        
