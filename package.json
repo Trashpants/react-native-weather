@@ -12,18 +12,23 @@
     "test": "jest --watchAll --verbose"
   },
   "jest": {
-    "preset": "jest-expo/universal",
+    "preset": "jest-expo",
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js"
     ],
-    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jestSetup.ts",
+      "@testing-library/jest-native/extend-expect"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
     ]
   },
   "dependencies": {
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "^5.7.5",
     "babel-plugin-inline-dotenv": "^1.6.0",
     "expo": "~39.0.2",
     "expo-splash-screen": "~0.6.1",
@@ -31,6 +36,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "~2.10.1",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
