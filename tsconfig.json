@@ -1,5 +1,30 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@screens/*": [
+        "src/views/screens/*"
+      ],
+      "@navigators/*": [
+        "src/views/navigators/*"
+      ],
+      "@state/*": [
+        "src/state/*"
+      ],
+      "@utilities/*": [
+        "src/utilities/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+    },
+    "downlevelIteration": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
@@ -7,6 +32,17 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
   }
 }
