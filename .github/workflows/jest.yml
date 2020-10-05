@@ -1,6 +1,8 @@
 name: Jest Testing
 
-on: push
+on:
+ workflow_run:
+    workflows: ["Linter"]
 
 jobs:
   # Set the job key. The key is displayed as the job name
