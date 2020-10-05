@@ -33,7 +33,7 @@ jobs:
     publish:      
       # Name the Job
       name: Deploy To Expo Default Channel
-      runs-on: macos-latest
+      runs-on: ubuntu-latest
 
       steps:
         - name: Checkout code
@@ -44,8 +44,8 @@ jobs:
         - name: Add Expo CLI
         - uses: expo/expo-github-action@v5
           with:
-            expo-username: ${{secrets.EXPO_USERNAME}}
-            expo-password: ${{secrets.EXPO_PASSWORD}}
+            expo-username: ${{ secrets.EXPO_USERNAME }}
+            expo-password: ${{ secrets.EXPO_PASSWORD }}
             expo-cache: true
         - name: Install modules
           run: yarn install
