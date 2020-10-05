@@ -30,16 +30,18 @@ jobs:
     publish:      
       # Name the Job
       name: Deploy To Expo Default Channel
-      runs-on: ubuntu-latest
+      runs-on: macos-latest
 
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
         - name: Add Expo CLI
-          run: npm install -g expo-cli
+          - uses: expo/expo-github-action@v4
+            with:
+              expo-username: ${{secrets.EXPO_USERNAME}}
+              expo-password: ${{secrets.EXPO_PASSWORD}}
+              expo-packager: yarn
         - name: Install modules
-          run: yarn
-        - name: Login to Expo
-          run: npx expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
-        - name: Push to Expo
-          run: npx expo publish --non-interactive
+          run: yarn install
+        - name: Push to Expo Default
+          run: expo publish --non-interactive
