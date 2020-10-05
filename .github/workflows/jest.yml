@@ -1,0 +1,20 @@
+name: Jest Testing
+
+on: push
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  jest:
+    # Name the Job
+    name: Test all Jest tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Lint
+        run: jest --verbose
+        
