@@ -30,3 +30,24 @@ jobs:
         - name: Jest
           run: yarn jest --verbose
         
+    publish:
+      # Name the Job
+      name: Deploy To Expo Default Channel
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 12.x
+        - name: Add Expo CLI
+          uses: expo/expo-github-action@v5
+          with:
+            expo-username: ${{ secrets.EXPO_USERNAME }}
+            expo-password: ${{ secrets.EXPO_PASSWORD }}
+            expo-cache: true
+        - name: Install modules
+          run: yarn install
+        - name: Push to Expo Default
+          run: expo publish --non-interactive
