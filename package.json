@@ -6,7 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint --ext .ts,.tsx . --max-warnings 0",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx . --max-warnings 0",
     "tsc": "tsc",
     "ci": "yarn lint && yarn tsc",
     "test": "jest --watchAll --verbose"
