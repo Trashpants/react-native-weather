@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import styled from "styled-components/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RouteProp } from "@react-navigation/native";
+import { RouteProp, useTheme } from "@react-navigation/native";
 import { OnboardStackParams } from "@navigators/OnboardNavigator";
 
 interface OnboardScreenProps {
@@ -10,11 +10,23 @@ interface OnboardScreenProps {
 }
 
 export default function OnboardScreen({}: OnboardScreenProps) {
+  const theme = useTheme();
+  const StyledView = styled.View`
+    background-color: #abc;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  `;
+
+  const StyledText = styled.Text`
+    color: ${theme.colors.text};
+  `;
+
   return (
     <>
-      <View>
-        <Text>Onboard</Text>
-      </View>
+      <StyledView>
+        <StyledText>Onboard</StyledText>
+      </StyledView>
     </>
   );
 }
