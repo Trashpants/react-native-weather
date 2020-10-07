@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Carousel default 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <RCTScrollView
+    decelerationRate="fast"
+    horizontal={true}
+    overScrollMode="never"
+    showsHorizontalScrollIndicator={false}
+    snapToInterval={750}
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          item
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          next
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;
+
+exports[`Storyshots CircleButton default 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderRadius": 32,
+        "height": 64,
+        "width": 64,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#a2acff",
+          "borderRadius": 32,
+          "height": 64,
+          "justifyContent": "center",
+          "transform": Array [
+            Object {
+              "scale": AnimatedValue {
+                " __value": 1,
+              },
+            },
+          ],
+          "width": 64,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

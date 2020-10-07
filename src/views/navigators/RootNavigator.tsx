@@ -7,7 +7,7 @@ import {
 import { useColorScheme } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-import HomeNavigator from "./HomeNavigator";
+//import HomeNavigator from "./HomeNavigator";
 import OnboardNavigator from "./OnboardNavigator";
 
 export default function RootNavigator() {
@@ -21,7 +21,7 @@ export default function RootNavigator() {
         translucent
       />
       <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
-        {true ? <OnboardNavigator /> : <HomeNavigator />}
+        <OnboardNavigator /> {/*}: <HomeNavigator /> */}
       </NavigationContainer>
     </>
   );

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Carousel default 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <RCTScrollView
+    decelerationRate="fast"
+    horizontal={true}
+    overScrollMode="never"
+    showsHorizontalScrollIndicator={false}
+    snapToInterval={750}
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          test
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          item
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#abc",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <Text>
+          next
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;

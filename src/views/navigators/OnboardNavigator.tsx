@@ -1,9 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { OnboardScreen } from "@screens/index";
+import { OnboardScreen, StorybookScreen } from "@screens/index";
 
 export type OnboardStackParams = {
   Onboard: undefined;
+  Storyboard: undefined;
 };
 
 const Stack = createStackNavigator<OnboardStackParams>();
@@ -19,6 +20,7 @@ export default function OnboardNavigator() {
       }}
     >
       <Stack.Screen name="Onboard" component={OnboardScreen} />
+      <Stack.Screen name="Storyboard" component={StorybookScreen} />
     </Stack.Navigator>
   );
 }
